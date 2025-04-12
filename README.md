@@ -121,6 +121,18 @@ python render.py -m output/exp-name --mode render
 python metrics.py -m output/exp-name
 ```
 
+### Render time&camera continues mp4
+
+```shell
+python render_mp4.py -m output/exp-name  --mode continuous
+```
+### Real-Time html
+
+```shell
+python server.py
+```
+
+
 We provide several modes for rendering:
 
 - `render`: render all the test images

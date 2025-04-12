@@ -161,7 +161,7 @@ def interpolate_all(model_path, load2gpt_on_the_fly, is_6dof, name, iteration, v
     makedirs(depth_path, exist_ok=True)
 
     frame = 150
-    render_poses = torch.stack([pose_spherical(angle, -30.0, 4.0) for angle in np.linspace(-180, 180, frame + 1)[:-1]],
+    render_poses = torch.stack([pose_spherical(angle, -0, 0.4) for angle in np.linspace(-180, 180, frame + 1)[:-1]],
                                0)
     to8b = lambda x: (255 * np.clip(x, 0, 1)).astype(np.uint8)
 
@@ -340,7 +340,7 @@ if __name__ == "__main__":
     parser.add_argument("--skip_train", action="store_true")
     parser.add_argument("--skip_test", action="store_true")
     parser.add_argument("--quiet", action="store_true")
-    parser.add_argument("--mode", default='render', choices=['render', 'time', 'view', 'all', 'pose', 'original'])
+    parser.add_argument("--mode", default='original', choices=['render', 'time', 'view', 'all', 'pose', 'original'])
     args = get_combined_args(parser)
     print("Rendering " + args.model_path)
 

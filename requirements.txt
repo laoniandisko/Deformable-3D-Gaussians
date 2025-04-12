@@ -1,10 +1,16 @@
-submodules/depth-diff-gaussian-rasterization
-submodules/simple-knn
-plyfile==0.8.1
-tqdm
-imageio==2.27.0
-opencv-python
-imageio-ffmpeg
-scipy
-dearpygui
-lpips
+# submodules/depth-diff-gaussian-rasterization
+# submodules/simple-knn
+# plyfile==0.8.1
+# tqdm
+# imageio==2.27.0
+# imageio-ffmpeg
+# scipy
+# dearpygui
+# lpips
+flask
+flask-socketio
+numpy
+torch
+pillow
+python-engineio
+python-socketio
